@@ -1,0 +1,30 @@
+.todo-card{
+        background-color: whitesmoke;
+        padding: 20px;
+        display: flex;
+        flex-direction:  column;
+        border: 0.5px solid grey;
+        width: 200px;
+        border-radius: 10px;
+        border-color: rgb(201, 198, 186);
+      }
+.todo-card-title{
+    font-weight: 700;
+}      
+.todo-card-details{
+    display :flex;
+    justify-content: space-between;
+}
+.todo-card-modify{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.todo-card-delete{
+    width: 50px;
+    cursor: pointer;
+}
+.todo-card-edit{
+    width: 50px;
+    cursor: pointer;
+}

@@ -1,0 +1,11 @@
+.App {
+  text-align: center;
+}
+.header{
+  background-color: rgb(182, 80, 223);
+  height: 30px;
+  color: #fff;
+  font-size: 20px;
+  padding:5px;
+  font-weight: 700;
+}
