@@ -10,9 +10,9 @@ If you want to run the app instantly, click [here](https://todos-v2-prash28s-pro
 
 # Getting Started with Todos v2.0 App
 
-``` git clone https://github.com/Prash28/Todos_v2.0.git ```
+```git clone https://github.com/Prash28/Todos_v2.0.git```
 
-``` cd Todos_v2.0```
+```cd Todos_v2.0```
 
 ```npm install```
 
