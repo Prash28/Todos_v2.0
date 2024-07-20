@@ -8,6 +8,8 @@ If you want to run the app instantly, click [here](https://todos-v2-prash28s-pro
 2. Delete tasks.
 3. Edit and update details of existing tasks.
 
+**Tools/Tech used:** All of MERN Stack.
+
 # Getting Started with Todos v2.0 App
 
 ```git clone https://github.com/Prash28/Todos_v2.0.git```
