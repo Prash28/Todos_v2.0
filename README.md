@@ -23,6 +23,7 @@ If you want to run the app instantly, click [here](https://todos-v2-prash28s-pro
 # To start the React app
 
 Open a new terminal to start the React app
+
 ```npm start```
 
 You should see the app running!
