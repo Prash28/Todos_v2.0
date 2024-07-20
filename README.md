@@ -3,6 +3,11 @@ See the instructions to setup and run the app. Also, view the features planned f
 
 If you want to run the app instantly, click [here](https://todos-v2-prash28s-projects.vercel.app/) for the Vercel deployment of my app.
 
+# Features of this Todo App
+1. Add new tasks.
+2. Delete tasks.
+3. Edit and update details of existing tasks.
+
 # Getting Started with Todos v2.0 App
 
 ``` git clone https://github.com/Prash28/Todos_v2.0.git ```
@@ -30,10 +35,11 @@ https://github.com/user-attachments/assets/a4dbab1c-a3b7-410d-9600-23388734f77b
 # Next Steps:
 
 1. Remove certain bugs which were found.
-2. Add a Light/Dark theme.
-3. Add a search bar to filter out tasks.
-4. Add an input container for description.
-5. Add pagination feature in case the number of tasks go above a certain threshold.
-6. Ability to filter the tasks according to their priority or status.
-7. Add a login feature.
+2. Add styling to certain elements.
+3. Add a Light/Dark theme.
+4. Add a search bar to filter out tasks.
+5. Add an input container for description.
+6. Add pagination feature in case the number of tasks go above a certain threshold.
+7. Ability to filter the tasks according to their priority or status.
+8. Add a login feature.
 
