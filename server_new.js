@@ -1,13 +1,17 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const uri = "mongodb+srv://prashanth:prashanth@todoscluster.ukx7gzz.mongodb.net/todosDB?retryWrites=true&w=majority&appName=todosCluster";
+
 // const clientOptions = { serverApi: { version: '1', strict: true, deprecationErrors: true, useNewUrlParser: true, useUnifiedTopology: true } };
 const Todo = require('D:/Prash/Work/Pesto Tech Project/todos_app/src/models/todo.js')
 const MongoClient = require('mongodb').MongoClient
 const app=express()
 app.use(cors())
 app.use(express.json())
+
+const uri=process.env.MONGO_URI;
+console.log('Mongo URI:', process.env.MONGO_URI);
 async function run() {
   try {
     // Create a Mongoose client with a MongoClientOptions object to set the Stable API version
@@ -16,7 +20,7 @@ async function run() {
     
 
     // Start the server after the connection is established
-    app.listen(4002, () => {
+    app.listen(process.env.PORT, () => {
       console.log("Server is running on port 4000")
     });
   } catch (err) {
