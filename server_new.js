@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 // const clientOptions = { serverApi: { version: '1', strict: true, deprecationErrors: true, useNewUrlParser: true, useUnifiedTopology: true } };
-const Todo = require('D:/Prash/Work/Pesto Tech Project/todos_app/src/models/todo.js')
+const Todo = require('./src/models/todo.js')
 const MongoClient = require('mongodb').MongoClient
 const app=express()
 app.use(cors())
