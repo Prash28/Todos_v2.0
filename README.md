@@ -1,6 +1,8 @@
 Thanks for checking my work! 🤠👋
 See the instructions to setup and run the app. Also, view the features planned for the future!
 
+If you want to run the app instantly, click [here](https://todos-v2-prash28s-projects.vercel.app/) for the Vercel deployment of my app.
+
 # Getting Started with Todos v2.0 App
 
 ``` git clone https://github.com/Prash28/Todos_v2.0.git ```
