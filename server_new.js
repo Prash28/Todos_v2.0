@@ -97,3 +97,39 @@ app.put('/updateTodo/:id', async (req, res) => {
     res.status(500).send({ message: 'Error in updating', err });
   }
 });
+
+app.get('/api/tasks/:status', async (req,res) => {
+  const {status} = req.params;
+  let newStatus;
+  if(status==="all"){
+    newStatus=""
+  } else if(status === "todo"){
+    newStatus="To Do"
+  } else if(status === "done"){
+    newStatus="Done"
+  }
+  else{
+    newStatus = "In Progress"
+  }
+    console.log(newStatus)
+    if(newStatus === ""){
+      try {
+        const data = await Todo.find()
+        res.json(data)
+      } catch (err) {
+        res.status(500).json({ error: err.message })
+      }
+    } else{
+      try{
+        const data = await Todo.find()
+        const newData = data.filter((each) => each.status === newStatus)
+        console.log("newData")
+        console.log(newData)
+        res.json(newData)
+      } catch (err) {
+        res.status(500).json({ error: err.message })
+      }
+      }
+  } 
+  
+)

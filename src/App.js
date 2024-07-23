@@ -8,11 +8,13 @@ function App() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [todos, setTodos] = useState([])
     const [isFetched, setIsFetched] = useState(false)
-    const [isEditClicked, setIsEditClicked] = useState(true)
     const [currentTodo, setCurrentTodo] = useState(null);
+    const [displayStatus, setDisplayStatus] = useState("all")
+    const [errMessage, setErrorMessage] = useState(false);
+    const [noData, setNoData] = useState(false)
 
-    const fetchData = async () => {
-      await fetch('http://localhost:4002/getAllItems')
+    const fetchData = async (displayStatus) => {
+      await fetch('http://localhost:4002/api/tasks/'+displayStatus)
       .then((response) => response.json())
       .then((data) => setTodos(data))
       .catch((err) => console.log(err))
@@ -20,17 +22,23 @@ function App() {
 
     useEffect(() =>{
       if(!isFetched){
-        fetchData();
+        fetchData(displayStatus);
       console.log(todos);
+      if(todos){
+        setNoData(false)
+      } else{
+        setNoData(true)
+      }
       setIsFetched(true);
+      
       }
     }, [isFetched]);
     const addTaskToDB = async (task, status, priority) => {
       console.log("to be added")
       console.log(JSON.stringify({
         todoTitle: task,
-        todoDescription: "Sleeeep",
-        priority: "Medium",
+        todoDescription: "Dummy Description",
+        priority: priority,
         status: status,
       }))
       await fetch('http://localhost:4002/',{
@@ -45,12 +53,27 @@ function App() {
           status: status,
         })
       })
+      setErrorMessage(false)
       setIsFetched(false)
+      
     }
     const handleAddItem = (task, status, priority) => {
       console.log("indisde fn")
       console.log("in app.js")
       addTaskToDB(task, status, priority)
+    }
+    const handleFilter = (option) => {
+      if(option === "All"){
+        setDisplayStatus("all");
+      }
+      else if(option === "To Do"){
+        setDisplayStatus("todo");
+      } else if(option === "In Progress"){
+        setDisplayStatus("inprogress");
+      } else{
+        setDisplayStatus("done");
+      }
+      setIsFetched(false);
     }
     const handleDeleteItem = async id => {
       await fetch(`http://localhost:4002/deleteTodo/${id}`, {
@@ -83,7 +106,8 @@ function App() {
     <div className="App">
       <header className="header">Todos App</header>
       <ListComponent todos={todos} handleAddItem={handleAddItem} 
-      handleDeleteItem={handleDeleteItem} openModal={openModal}
+      handleDeleteItem={handleDeleteItem} openModal={openModal} handleFilter={handleFilter}
+      errMessage={errMessage} setErrorMessage={setErrorMessage} noData={noData}
       />
       <EditModal
         isOpen={isModalOpen}

@@ -60,7 +60,7 @@
 }
 .todos-card-container{
     margin: 30px;
-    width: 50%;
+    width: 80%;
     padding: 50px;
     display: grid;
     margin: auto;
@@ -69,10 +69,29 @@
     justify-content: center;
     align-content: center;
     /* flex-direction: row; */
+    /* border: 1px solid red; */
+    text-align: center;
 }
 .add-todo-container{
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.input-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border: 1px solid red;
+}
+.err-msg{
+    font-size: 12px;
+    color: red;
+}
+.nothing-display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%
 }
