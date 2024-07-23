@@ -104,7 +104,7 @@ function App() {
     };
   return (
     <div className="App">
-      <header className="header">Todos App</header>
+      <header className="header">TODOS APP</header>
       <ListComponent todos={todos} handleAddItem={handleAddItem} 
       handleDeleteItem={handleDeleteItem} openModal={openModal} handleFilter={handleFilter}
       errMessage={errMessage} setErrorMessage={setErrorMessage} noData={noData}
