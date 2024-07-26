@@ -35,6 +35,9 @@ Note: For some reason, the screen recorder didn't capture the dropdowns. Not sur
 
 https://github.com/user-attachments/assets/a4dbab1c-a3b7-410d-9600-23388734f77b
 
+# Updates:
+On 07/24: Added Filter function to display the tasks according to their status.
+
 # Next Steps:
 
 1. Remove certain bugs which were found.
