@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  width: 100%;
 }
 .header{
   /* background-color: rgb(89, 207, 128); */
@@ -8,6 +9,8 @@
   height: 30px;
   color: #fff;
   font-size: 20px;
+  /* width: 100%; */
+  box-sizing: content-box;
   padding:5px;
   font-weight: 700;
   font-family: 'Segoe Print', 'Bradley Hand', Chilanka, TSCu_Comic, casual, cursive;

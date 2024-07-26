@@ -69,7 +69,7 @@ const ListComponent = ({todos, handleAddItem, handleDeleteItem, openModal, handl
         <div className="todos-card-container">
           {todos.map((list, index) => { 
             return(
-              <ListItem key={index} item={todos[index]} handleDeleteItem={handleDeleteItem} openModal={openModal}/>
+              <ListItem key={index} item={todos[index]} handleDeleteItem={handleDeleteItem} openModal={openModal} />
             ) 
           })}
           
